@@ -1,0 +1,11 @@
+Best and worst cases for a given size n amount of elements
+
+Insertion sort:
+-The worst case for size n elements is if the elements are sorted from largest to smallest (assuming we are sorting for the smallest to largest)
+-The best case is if the elements are already sorted in the correct order from smallest to largest (again assuming same sorting requirement)
+
+
+Mergesort:
+-The worst case for n elements is if in all situations of re-merging the elements, the largest values are in the last position that the loop is checking
+-The best case is if the array is already sorted
+

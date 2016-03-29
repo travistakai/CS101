@@ -1,0 +1,8 @@
+Travis Takai 1375886
+Daniel Thurau 1402341
+
+Of all the implementations, linear seems to be the best for our purposes. Quadratic was terrible because it would go forever in 
+search for a value already in the table that may not be there. If this had been a closed table then quadratic may be a lot better. 
+Chaining was the easiest to implement but not necessarily the greatest for time complexity. We chose a small load factor to 
+resize at since it improves the performance of the hashtable by quite a bit. In varying sized tables, chaining and linear mapping 
+are much better equipped to handle edge cases. Overall, the best solution seems to be finding a suitable hash function that can map all values uniquely. 

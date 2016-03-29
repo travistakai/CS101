@@ -1,0 +1,18 @@
+The complexity for number one follows as O(n^2). This is due to the fact that there are nested for loops within the function
+ 
+After creating the Hadamard matrix using the algorithm in problem 2,
+you split the now 2^k x 2^k matrix into its four quadrant.  You also
+take the 2^k x 1 vector and split it in half.  The top left quadrant and
+the bottom left quadrant are exactly the same, so doing the vector
+multiplication of the top half of the vector and just one left quadrant
+creates the same vector answer that we will call v1.  Now by performing
+matrix multiplication on the top right quadrant by the botttom half of
+the original vector, you get a  2^k/2 x 1 vector that we will call v2.
+The bottom right quadrant is just the inverse of the top right quadrant,
+so all we do is multiply v2 by -1 and get a resulting vector we will call
+v3..  Now we add all our resulting vectors.  To get the top half of the
+resulting 2^k x 1 answer vector we add v1 to v2.  To get the bottom half
+of that resulting vector we add v1 to v3.  Now we just combine the top half
+and the bottom half and that is the answer.
+ 
+For number 5, we were unable to get the time complexity any lower than that of the brute force method. It appears to be roughly c(n^2) as well for time complexity, only a constant amount of time slower than the brute force method. This is an interesting outcome since that we assumed the algorithm would run faster for a recursive function rather than a linear function. Our tests of the total time and the time per element are both indicating that the function from problem 1 is faster than our implementation.

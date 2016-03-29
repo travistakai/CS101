@@ -1,0 +1,10 @@
+Changes:
+	To start we removed the num_balls x num_balls array and the two wall 1D arrays.
+	That meant that instead of updating those arrays we directly inserted values 
+	into our priority queue. This meant that there needed to be a function 
+	that when something was inserted at the back of the min_heap, it brought it to its
+	correct position to maintain the heap property.  To combat this we created the
+	function heap_increase_key.  We also implemented a delete function, which used the 
+	very important heapify function.  There was also a slew of helper functions we 
+	implemented to make the code run a little bit smoother and be slighlty more
+	effcient.

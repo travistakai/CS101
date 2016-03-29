@@ -1,0 +1,31 @@
+Travis Takai 1375886
+Dan Thurau 1402341
+
+For Programming HW#4 the changes we made were adding several new classes for the chaining, open linear, and open quadratic dictionaries. Within each class was a set of methods that were based on the original dictionary implementation.
+Each implementation required seperate methodologies in order to achieve optimal results.
+
+Chaining:
+-Used the built-in Python lists in order to use helper functions to find indices, find elements, and insert new keys or values
+-Assumed a static size array and only appended to lists to use "chaining"
+-Used two seperate arrays, one to store the values and one to store the corresponding keys. Insertions were made at the same time to avoid mixing up key/value pairs.
+-Insert only updates values if theyre already within the table
+-Built in hashing function was used with % table size to allow wrap around
+
+
+Linear:
+-Still used lists for each insertion but only inserted a maximum of 1 element per slot.
+-Same structure of two seperate arrays was also used here.
+-Key was hashed only once, then incremented by one for each collision
+-Same structure for insertion by only updating already inserted values
+-Resizing of table occurs at load factor of .5 in order to maximize time complexity and prevent O(n) for every insertion
+
+
+Quadratic:
+-Same implementation as linear but uses h(key) + x^2 to walk along in a quadratic fashion
+-Difference in resizing table occurs at .1 rather than .5. This is due to the nature of quadratic probing and how it has the possibility of never probing an empty slot.
+-Uses same list within two arrays approach
+-Tuples were created at get_key_values() in order to package and disperse information correctly.
+
+Set:
+-Uses same principles as chaining hash table
+-Easiest to implement but not great for time complexity

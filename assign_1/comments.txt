@@ -1,0 +1,23 @@
+Comments.txt
+Observations of graphs
+
+Best/worst case of insertionSort:
+-The worst case of insertionsort grows fairly exponentially in comparison to the best case
+-As n increases, the time required to sort also does
+
+-The best case stays fairly constant throught each run
+-Minimal change with an increase in n
+
+Best/worst case of mergeSort
+-Both the best and worst case for mergesort are roughly equivalent
+-The function remains nlog(n) for both cases
+-As n increases the time increases increases linearly for small n
+
+
+Average case of insertionSort:
+- In the average case the time behaves similarly to the worst case
+- The graph appears to be exponential for the time taken to sort the array
+
+Average case of mergeSort:
+- Again, the function mimicks both the best and worst case scenarios of n
+- Time appears linear due to the lack or large n

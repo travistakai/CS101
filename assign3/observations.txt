@@ -1,0 +1,7 @@
+Observations
+	Initializing takes much less time for the priority queue, and the priority queue
+	definitly is more effecient inserting values, but for balls all the way up to 100 
+	it seemed like the priority queue and the array based data structure lagged evenly. 
+	When there was a break in ball collisions when num_balls was smaller, it seemed like 
+	the priority queue sped up much quicker and was able to get_next values much quicker.
+
